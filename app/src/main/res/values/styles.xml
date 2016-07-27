@@ -1,0 +1,80 @@
+<resources>
+    <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="@android:style/Theme.NoTitleBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!-- 顶部标题栏 -->
+    <style name="topbar_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/topBar_height</item>
+        <item name="android:background">#F1F1F1F1</item>
+    </style>
+    <!--头部左边样式-->
+    <!--标题ImageButton样式-->
+    <style name="topbar_btn_left">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/topBar_left_padding</item>
+        <item name="android:paddingRight">@dimen/topBar_left_padding</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@null</item>
+    </style>
+    <!--标题TextView样式-->
+    <style name="topbar_tv_left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/topBar_left_padding</item>
+        <item name="android:paddingRight">@dimen/topBar_left_padding</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--头部右边样式-->
+    <!--标题ImageButton样式-->
+    <style name="topbar_btn_right">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/topBar_left_padding</item>
+        <item name="android:paddingRight">@dimen/topBar_left_padding</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <!--标题TextView样式-->
+    <style name="topbar_tv_right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/topBar_left_padding</item>
+        <item name="android:paddingRight">@dimen/topBar_left_padding</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- 中间题目样式-->
+    <style name="topbar_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- 选择按钮-->
+    <style name="cm_check">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:button">@null</item>
+    </style>
+    <!--标题栏样式-横线-->
+    <style name="title_line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@mipmap/cm_divider</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+</resources>

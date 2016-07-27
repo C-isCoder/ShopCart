@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:fitsSystemWindows="true">
+    <!--标题栏-->
+    <RelativeLayout
+        android:id="@+id/title"
+        style="@style/topbar_layout">
+
+        <ImageButton
+            style="@style/topbar_btn_left"
+            android:onClick="back"
+            android:src="@drawable/cm_btn_back" />
+
+        <TextView
+            style="@style/topbar_title"
+            android:text="购物车"
+            android:textColor="#EA4C87" />
+
+        <TextView
+            android:id="@+id/shopping_car_tv_edit"
+            style="@style/topbar_tv_right"
+            android:text="编辑"
+            android:textColor="#EA4C87" />
+
+        <View style="@style/title_line_style" />
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/shopping_car_lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginBottom="56dp"
+        android:childDivider="@null"
+        android:childIndicator="@null"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:groupIndicator="@null"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/shopping_car_cb_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:button="@drawable/meal_online_check_bg"
+            android:gravity="center"
+            android:text="全选"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/shopping_car_ll_price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合计："
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/shopping_car_tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥0.00"
+                android:textColor="#EA4C87"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/shopping_car_btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#EA4C87"
+            android:text="提交订单"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>
