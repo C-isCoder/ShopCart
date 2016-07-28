@@ -45,7 +45,7 @@ public class ShoppingCarExAdapter extends BaseExpandableListAdapter {
     public View getGroupView(final int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
         convertView = null;
         final GroupViewHolder holder;
-        final ShoppingCarData shoppingCarData = mList.get(groupPosition);
+        final ShoppingCarData shoppingCarData = (ShoppingCarData) getGroup(groupPosition);
         if (convertView == null) {
             holder = new GroupViewHolder();
             convertView = mInflater.inflate(R.layout.item_shopping_car, null);
@@ -87,7 +87,7 @@ public class ShoppingCarExAdapter extends BaseExpandableListAdapter {
         //TODO 而是 前面显示过的GroupItem的ChildView 这样的话 设置的Tag值就没办法保持唯一性就不能记录 CheckBox状态了。待解决。
         convertView = null;
         final ChildViewHolder holder;
-        final MealMenuData goodData = mList.get(groupPosition).goodList.get(childPosition);
+        final ShoppingCarData.Product goodData = (Product) getChild(groupPosition, childPosition);
         if (convertView == null) {
             holder = new ChildViewHolder();
             convertView = mInflater.inflate(R.layout.item_shopping_car_list, null);
