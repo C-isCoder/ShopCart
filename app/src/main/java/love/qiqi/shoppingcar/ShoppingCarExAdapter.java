@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.CheckBox;
+import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -78,6 +79,9 @@ public class ShoppingCarExAdapter extends BaseExpandableListAdapter {
             }
         });
         holder.mName.setText(shoppingCarData.name == null ? "" : shoppingCarData.name);
+        //展开
+        ExpandableListView expandableListView = (ExpandableListView) parent;
+        expandableListView.expandGroup(groupPosition);
         return convertView;
     }
 
@@ -87,7 +91,7 @@ public class ShoppingCarExAdapter extends BaseExpandableListAdapter {
         //TODO 而是 前面显示过的GroupItem的ChildView 这样的话 设置的Tag值就没办法保持唯一性就不能记录 CheckBox状态了。待解决。
         convertView = null;
         final ChildViewHolder holder;
-        final ShoppingCarData.Product goodData = (Product) getChild(groupPosition, childPosition);
+        final MealMenuData goodData = (MealMenuData) getChild(groupPosition, childPosition);
         if (convertView == null) {
             holder = new ChildViewHolder();
             convertView = mInflater.inflate(R.layout.item_shopping_car_list, null);
@@ -215,7 +219,6 @@ public class ShoppingCarExAdapter extends BaseExpandableListAdapter {
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return false;
     }
-
     /**
      * GroupViewHolder
      */

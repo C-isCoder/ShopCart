@@ -46,6 +46,9 @@ public class ShoppingCarActivity extends Activity implements ShoppingCarModifyIn
     }
 
     private void initData() {
+        if (mSelectCarData == null) {
+            mSelectCarData = new ArrayList<>();
+        }
         if (mListData == null) {
             mListData = new ArrayList<>();
             ShoppingCarData carData = new ShoppingCarData();
@@ -87,18 +90,22 @@ public class ShoppingCarActivity extends Activity implements ShoppingCarModifyIn
             carData1.goodList.add(data5);
             mListData.add(carData1);
         }
-        if (mSelectCarData == null) {
-            mSelectCarData = new ArrayList<>();
-        }
     }
 
     private void initView() {
         mCarExAdapter = new ShoppingCarExAdapter(this, mListData);
         lvList.setAdapter(mCarExAdapter);
-        int size = mListData.size();
-        for (int i = 0; i < size; i++) {
-            lvList.expandGroup(i);//展开所有
-        }
+        lvList.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+                //屏蔽点击事件
+                return true;
+            }
+        });
+//        int size = mListData.size();
+//        for (int i = 0; i < size; i++) {
+//            lvList.expandGroup(i);//展开所有
+//        }
         mCarExAdapter.setModifyNotificationListener(this);
     }
 
