@@ -2,7 +2,7 @@
 仿照淘宝的购物车。
 # 核心类：
 ## Adapter
-``` 
+``` java
 package love.qiqi.shoppingcar;
 
 
@@ -269,7 +269,7 @@ public class ShoppingCarExAdapter extends BaseExpandableListAdapter {
 }
 ```
 #Activity
-```
+```java
 package love.qiqi.shoppingcar;
 
 import android.app.Activity;
