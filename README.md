@@ -1,7 +1,11 @@
 # ShoppingCar
-仿照淘宝的购物车。
+
+🛒 仿淘宝的购物车。
+
 # 核心类：
+
 ## Adapter
+
 ``` java
 package love.qiqi.shoppingcar;
 
